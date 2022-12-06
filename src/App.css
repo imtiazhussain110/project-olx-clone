@@ -1,0 +1,101 @@
+@media (max-width: 992px) {
+
+    .top,
+    .bottom {
+        width: 100% !important;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.searchContent {
+    align-self: flex-start !important;
+}
+
+
+
+/* ---------------- */
+
+.countrySearch {
+    width: max-content;
+}
+
+
+.productSearch {
+    width: 40%;
+}
+
+.productSearchButton {
+    background-color: #002F34;
+}
+
+
+.loginButton,
+.loginButton:hover {
+    color: #002F34;
+}
+
+.loginButton::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    top: 100%;
+    left: 0;
+}
+
+.loginButton:hover::after {
+    width: 0%;
+}
+
+.sellButton {
+    top: 11px;
+    left: 1.7rem;
+    width: max-content;
+
+}
+
+.sellButtonContainer {
+    cursor: pointer;
+    z-index: 12 !important;
+}
+
+
+@media (max-width: 992px) {
+    .sellButtonContainer {
+        position: absolute !important;
+        bottom: 2rem;
+        left: 43%;
+    }
+}
+
+@media (max-width: 576px) {
+    .sellButtonContainer {
+        position: absolute !important;
+        bottom: 2rem;
+        left: 34%;
+    }
+}
+
+/* ------------------------ */
+
+.categorylist>ul>li {
+    cursor: pointer;
+}
+
+.allCategories {
+    top: calc(30% - 5px);
+    z-index: 1024 !important;
+}
+
+/* -------------------------------- */
+
+.cardImg {
+    object-fit: contain !important;
+    height: 150px !important;
+}
+
+.card-bottom-text {
+    font-size: 12px;
+}
