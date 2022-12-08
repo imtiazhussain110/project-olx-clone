@@ -24,7 +24,7 @@ function Top() {
 
   return (
     <>
-      {/* Hamburger menu content */}
+      {/* Hamburger menu content goes here (In progress) */}
 
       {/* ------------------------------------------------------- */}
       <div className="top container-fluid row w-75 mx-lg-auto">

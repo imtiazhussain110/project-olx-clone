@@ -6,18 +6,7 @@ function Bottom() {
   return (
     <>
       <div className="container-fluid py-3 row gap-2 mx-auto w-75 bottom">
-        {/* Conent of Bottom in larger screen */}
-
-        <div className="searchContent border border-2 border-dark rounded-1 bg-white p-2 d-lg-none row sticky-top">
-          <i class="fa fa-magnifying-glass col-1 max-width max-height mt-1"></i>
-          <input
-            type="text"
-            className="border-0 px-2 col-10"
-            placeholder="All ads in Pakistan"
-          />
-        </div>
-
-        {/* Conent of Bottom in larger screen */}
+        {/* Content of Bottom in large screen */}
         <img
           className="col-lg-1 d-none d-lg-block"
           src={logo2}
@@ -48,7 +37,7 @@ function Bottom() {
         <button className=" border-0 bg-transparent col-lg-1 d-none d-lg-block">
           <a
             href="#"
-            className="loginButton fw-bold text-decoration-none position-relative"
+            className="loginButton fs-5 fw-bold text-decoration-none position-relative"
           >
             Login
           </a>

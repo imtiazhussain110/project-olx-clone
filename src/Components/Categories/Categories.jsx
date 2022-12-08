@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import DropDown from "./DropDown";
 
 function Categories() {
   const [isArrowUp, setIsArrowUp] = useState(false);
@@ -23,7 +24,7 @@ function Categories() {
         <ul className=" list-inline">
           <li
             onClick={handleArrow}
-            className="list-inline-item fw-bold text-dark"
+            className="category-heading list-inline-item fw-bold text-dark"
           >
             ALL CATEGORIES
             <i
@@ -33,23 +34,19 @@ function Categories() {
           </li>
           <li
             style={categoryStyle}
-            className="allCategories position-absolute left-0 bg-white shadow p-3"
+            className="allCategories position-absolute left-0 bg-white shadow p-5"
           >
-            <h1>Hello WOrld Hello WOrld Hello WOrld Hello WOrld</h1>
-            <h1>Hello WOrld Hello WOrld Hello WOrld Hello WOrld</h1>
-            <h1>Hello WOrld Hello WOrld Hello WOrld Hello WOrld</h1>
-            <h1>Hello WOrld Hello WOrld Hello WOrld Hello WOrld</h1>
-            <h1>Hello WOrld Hello WOrld Hello WOrld Hello WOrld</h1>
-            <h1>Hello WOrld Hello WOrld Hello WOrld Hello WOrld</h1>
-            <h1>Hello WOrld Hello WOrld Hello WOrld Hello WOrld</h1>
+            <DropDown />
           </li>
-          <li className="list-inline-item ms-2">Mobile Phones</li>
-          <li className="list-inline-item ms-2">Cars</li>
-          <li className="list-inline-item ms-2">Motorcycles</li>
-          <li className="list-inline-item ms-2">Houses</li>
-          <li className="list-inline-item ms-2">TV-Video_Audio</li>
-          <li className="list-inline-item ms-2">Tablets</li>
-          <li className="list-inline-item ms-2">Land & Plots</li>
+          <li className="list-inline-item ms-2 main-category">Mobile Phones</li>
+          <li className="list-inline-item ms-2 main-category">Cars</li>
+          <li className="list-inline-item ms-2 main-category">Motorcycles</li>
+          <li className="list-inline-item ms-2 main-category">Houses</li>
+          <li className="list-inline-item ms-2 main-category">
+            TV-Video-Audio
+          </li>
+          <li className="list-inline-item ms-2 main-category">Tablets</li>
+          <li className="list-inline-item ms-2 main-category">Land & Plots</li>
         </ul>
       </div>
     </div>

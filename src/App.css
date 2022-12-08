@@ -1,20 +1,17 @@
-@media (max-width: 992px) {
+/* ------------- Header ------------- */
 
-    .top,
-    .bottom {
-        width: 100% !important;
-        margin: 0;
-        padding: 0;
-    }
+.header {
+    z-index: 1024 !important;
 }
 
 .searchContent {
-    align-self: flex-start !important;
+    width: 90% !important;
 }
 
-
-
-/* ---------------- */
+.header,
+.searchContentContainer {
+    background-color: #f7f8f8;
+}
 
 .countrySearch {
     width: max-content;
@@ -32,7 +29,7 @@
 
 .loginButton,
 .loginButton:hover {
-    color: #002F34;
+    color: #002F34 !important;
 }
 
 .loginButton::after {
@@ -61,6 +58,18 @@
     z-index: 12 !important;
 }
 
+/* ------------- Header Media Queries ------------- */
+
+@media (max-width: 992px) {
+
+    .top,
+    .bottom {
+        width: 100% !important;
+        margin: 0;
+        padding: 0;
+    }
+}
+
 
 @media (max-width: 992px) {
     .sellButtonContainer {
@@ -78,7 +87,7 @@
     }
 }
 
-/* ------------------------ */
+/* ------------- Category ------------- */
 
 .categorylist>ul>li {
     cursor: pointer;
@@ -86,16 +95,119 @@
 
 .allCategories {
     top: calc(30% - 5px);
-    z-index: 1024 !important;
+    z-index: 500 !important;
 }
 
-/* -------------------------------- */
-
-.cardImg {
-    object-fit: contain !important;
-    height: 150px !important;
+.main-category,
+.category-heading {
+    font-size: 14px !important;
+    color: rgb(0, 47, 52);
+    text-decoration: none;
 }
 
-.card-bottom-text {
+.main-category:hover {
+    color: rgb(0, 164, 159) !important;
+}
+
+/* ------------- Cards ------------- */
+
+.card-img {
+    width: 100%;
+    object-fit: contain;
+    height: 150px;
+    background-color: rgb(34, 34, 34);
+    border-radius: 5px 5px 0 0;
+}
+
+.featur-btn {
+    background-color: #FFCE32;
+    font-size: 10px;
+    top: 120px;
+    left: 5px;
+}
+
+.cardFooter {
     font-size: 12px;
+    color: rgb(56, 53, 53);
 }
+
+
+.heart-icon {
+    right: 8px !important;
+    top: 12px !important;
+}
+
+.feature-line {
+    width: 5px;
+    height: 100%;
+    background-color: #FFCE32;
+    border-radius: 0 0 0 5px;
+}
+
+.load-more-btn:hover {
+    outline: 2px solid black !important;
+    transition: 0.05s ease;
+}
+
+/* ------------- Download ------------- */
+
+.download-section {
+    background-color: #F7F8F9;
+}
+
+.download-section-divider {
+    width: 2px;
+    height: 8rem;
+    background-color: #C6CFD1;
+}
+
+.store-icon-download {
+    width: 7rem !important;
+    margin-right: 0.4rem !important;
+}
+
+/* ------------- Download Media Queries ------------- */
+
+@media (max-width: 768px) {
+    .download-section {
+        display: none;
+    }
+}
+
+/* ------------- Footer ------------- */
+
+.footer {
+    background-color: #EBEEEF !important;
+}
+
+.footer-links {
+    text-decoration: none;
+    color: rgb(134, 134, 134);
+    font-size: 12px !important;
+}
+
+
+.footer-links:hover {
+    color: rgb(0, 0, 0) !important;
+}
+
+.social-icons {
+    width: 1.8rem !important;
+    margin-right: 0.4rem !important;
+}
+
+.store-icons {
+    width: 5.5rem !important;
+    margin-right: 0.4rem !important;
+}
+
+.copyRight {
+    background-color: #002F34;
+}
+
+.copyRightText {
+    font-weight: 100 !important;
+    font-size: 12px !important;
+}
+
+/* ------------------------------ */

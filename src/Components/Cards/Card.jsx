@@ -1,32 +1,36 @@
 import React from "react";
 
-function Card(props) {
+function Cards(props) {
   return (
     <>
-      <div className="card">
-        <img
-          className="cardImg card-img-top img-fluid bg-dark"
-          src={props.imgSrc}
-          alt="poster image"
-        />
+      <div className="col-md-4 col-sm-6 col-lg-3">
         <div
-          title="LG V60 | V50 | V30 | V7 mobile phone"
-          className="card-body pb-0"
+          className="card position-relative"
+          style={{ height: "auto", minHeight: "310px" }}
         >
-          <div className="card-title d-flex">
-            <h2 className="fs-5">LG V60 | V50 | V30 | V7 mobile phone</h2>
-            <i className="fa-regular fa-heart fs-4"></i>
+          <img
+            src={props.srcImg}
+            className="card-img-top card-img"
+            alt="card image"
+          />
+          <button className="featur-btn position-absolute border-0 rounded p-1 fw-bold">
+            FEATURED
+          </button>
+          <div className="card-body position-relative pb-0">
+            <span className="feature-line position-absolute top-0 start-0"></span>
+            <i className="fa-regular fa-heart heart-icon position-absolute"></i>
+            <p className="card-text">
+              Toyota Belta X Business
+              <p> Package 1.3 2010</p>
+            </p>
+
+            <h5 className="fw-bold price">Rs 1,900,000</h5>
+            <p className="cardFooter">Mall Road, Lahore . 1 week ago</p>
           </div>
-          <div className="card-text">
-            <p className="fw-bold fs-4">Rs. 35,0000</p>
-          </div>
-          <p className="card-bottom-text text-secondary ">
-            Civil Defence, Lahore <span>•</span> 2 weeks ago
-          </p>
         </div>
       </div>
     </>
   );
 }
 
-export default Card;
+export default Cards;
