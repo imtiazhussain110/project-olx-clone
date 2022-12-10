@@ -1,9 +1,6 @@
 import React from "react";
-import firstImg from "../../Images/first.jfif";
 import Card from "./Card";
 import img from "../../Images/first.jfif";
-import img2 from "../../Images/second.jfif";
-import img3 from "../../Images/third.jfif";
 
 export default function Cards() {
   return (
@@ -23,7 +20,7 @@ export default function Cards() {
         </div>
 
         <div className="container-fluid py-3">
-          <button class="load-more-btn btn btn-md border border-2 border-dark mx-auto d-block fw-bold">
+          <button className="load-more-btn btn btn-md border border-2 border-dark mx-auto d-block fw-bold">
             Load More
           </button>
         </div>

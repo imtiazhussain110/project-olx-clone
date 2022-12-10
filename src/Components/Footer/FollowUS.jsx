@@ -11,7 +11,7 @@ function FollowUS() {
   return (
     <>
       <section>
-        <span class=" fs-6 fw-bold">Follow us</span>
+        <span className=" fs-6 fw-bold">Follow us</span>
         <div className="py-3">
           <a href="" target="_blank">
             <img src={facebook} alt="Facebook Logo" className="social-icons" />

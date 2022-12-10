@@ -4,7 +4,7 @@ function About() {
   return (
     <>
       <section>
-        <span class="fs-6 fw-bolder">About Us</span>
+        <span className="fs-6 fw-bolder">About Us</span>
         <ul className="list-unstyled ps-0 py-3">
           <li className="py-1">
             <a className="footer-links" href="">

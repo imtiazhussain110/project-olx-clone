@@ -11,9 +11,9 @@ function Header() {
       </header>
       {/* Content of Bottom in medium and small screen */}
 
-      <div className="searchContentContainer sticky-top pb-3 pt-1">
-        <div className="searchContent border border-2 border-dark rounded-1 bg-white py-2 d-lg-none row mx-auto">
-          <i class="fa fa-magnifying-glass col-1 max-width max-height mt-1"></i>
+      <div className="searchContentContainer sticky-top pb-3 pt-1 d-lg-none">
+        <div className="searchContent border border-2 border-dark rounded-1 bg-white py-2 row mx-auto">
+          <i className="fa fa-magnifying-glass col-1 max-width max-height mt-1"></i>
           <input
             type="text"
             className="searchContentInput border-0 px-2 col-10"

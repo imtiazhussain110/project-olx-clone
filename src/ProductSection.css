@@ -1,0 +1,86 @@
+/* -------------- Product Slider -------------- */
+
+.productImageSlider {
+    height: 90vh;
+    border-radius: 5px;
+}
+
+.carouselInnerContainer {
+    height: 80%;
+    border-radius: 5px 5px 0 0;
+}
+
+.slideImg {
+    object-fit: contain;
+    height: 100% !important;
+    width: 100% !important;
+    background-color: rgb(34, 34, 34);
+
+}
+
+.thumb-container {
+    height: 18%;
+}
+
+.thumbs {
+    height: 80% !important;
+}
+
+.active {
+    opacity: 1 !important;
+    border: 2px solid black !important;
+
+}
+
+.thumbs:hover {
+    opacity: 1;
+}
+
+.prev,
+.next {
+    margin-bottom: 20%;
+}
+
+/* -------------- Product Price -------------- */
+
+.priceRowIcons,
+.priceRowPrice,
+.priceRow {
+    height: fit-content;
+}
+
+.fa-share-nodes:hover {
+    color: #3A77FF;
+    cursor: pointer;
+}
+
+.fa-heart {
+    cursor: pointer;
+}
+
+/* -------------- Seller Description -------------- */
+
+.sellerImage {
+    width: 4rem;
+}
+
+.memberTime {
+    font-size: 14px;
+}
+
+.sellerName {
+    font-size: 1rem;
+}
+
+.chatWithSellerBtn,
+.chatWithSellerBtn:hover {
+    background-color: #002F34;
+    font-size: 1rem;
+}
+
+
+/* -------------- Product Info -------------- */
+
+.productInfoHeading {
+    font-size: 20px;
+}

@@ -3,6 +3,7 @@ import { ReactComponent as Logo1 } from "../../Images/logo1.svg";
 import { ReactComponent as Car } from "../../Images/car.svg";
 import { ReactComponent as Buildings } from "../../Images/buildings.svg";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Top() {
   const [isHoverCar, setIsHoverCar] = useState(false);
@@ -29,12 +30,12 @@ function Top() {
       {/* ------------------------------------------------------- */}
       <div className="top container-fluid row w-75 mx-lg-auto">
         <div className="col-1 col-sm-1 d-lg-none my-auto">
-          <i class="fa-solid fa-bars max-width"></i>
+          <i className="fa-solid fa-bars max-width"></i>
         </div>
         <div className="col-lg-1 col-2 col-sm-2 ">
-          <a href="#" className="max-width align-middle">
+          <Link to="/" className="max-width align-middle">
             <Logo1 fill="#3A77FF" />
-          </a>
+          </Link>
         </div>
         <div className="col-lg-2 col-5 col-sm-5">
           <a
@@ -43,7 +44,7 @@ function Top() {
             onMouseEnter={handleMouseEnterCar}
             onMouseLeave={handleMouseLeave}
           >
-            <Car fill={isHoverCar && "#3A77FF"} />
+            <Car fill={isHoverCar ? "#3A77FF" : ""} />
           </a>
         </div>
         <div className="col-lg-2 col-4 col-sm-4">
@@ -53,7 +54,7 @@ function Top() {
             onMouseEnter={handleMouseEnterProperty}
             onMouseLeave={handleMouseLeave}
           >
-            <Buildings fill={isHoverProperty && "#3A77FF"} />
+            <Buildings fill={isHoverProperty ? "#3A77FF" : ""} />
           </a>
         </div>
       </div>
