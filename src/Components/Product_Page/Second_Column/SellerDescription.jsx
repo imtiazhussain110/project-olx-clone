@@ -1,6 +1,8 @@
 import React from "react";
 import sellerImage from "../../../Images/sellerProfile.png";
-function SellerDescription() {
+import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
+import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
+function SellerDescription(props) {
   return (
     <>
       <div className="container border rounded-2 my-2 py-4 px-3">
@@ -12,21 +14,22 @@ function SellerDescription() {
             alt="seller profile image"
           />
           <div className="sellerNameAndTime max-height my-auto ms-2">
-            <h3 className="sellerName m-0 fw-bold">Mughal</h3>
+            <h3 className="sellerName m-0 fw-bold">Olx User</h3>
             <p className="memberTime grayShade m-0">Member since Jul 2022</p>
           </div>
-          <i
+          <ArrowForwardIosOutlinedIcon
             role="button"
-            className="fa-solid fa-angle-right ms-auto max-height my-auto fs-4"
-          ></i>
+            className="ms-auto max-height my-auto fs-4"
+          />
         </div>
         <button className="btn btn-lg w-100 chatWithSellerBtn text-white fw-bold rounded-1 my-3">
           Chat with seller
         </button>
         <div className="sellerContactDetail text-center">
-          <i className="fa fa-phone fs-5"></i>
+          <LocalPhoneOutlinedIcon className="fs-3" />
+
           <span className="fs-14 text-primary ms-3 fw-bold">
-            +92 123 4566789
+            +92 123 333 5678
           </span>
         </div>
       </div>

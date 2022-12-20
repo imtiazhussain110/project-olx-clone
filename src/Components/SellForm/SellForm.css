@@ -1,0 +1,55 @@
+/* -------- Sell Form ------------ */
+
+.form-control {
+    border: 1px solid rgb(0, 0, 0) !important;
+}
+
+
+.form-pera {
+    font-size: small;
+}
+
+.column {
+    border: 2px solid rgba(78, 77, 77, 0.438);
+    border-radius: 5px;
+    width: max-content;
+}
+
+.camera-icon {
+    top: 50px;
+    left: 103px;
+    width: 3rem;
+    height: 50px;
+}
+
+.input-img {
+    font-size: small;
+}
+
+.sellFormBtn {
+    background-color: #002F34
+}
+
+.sellFormBtn:hover {
+    transition: all 0.3s;
+    background-color: white;
+    color: #002F34 !important;
+}
+
+.color {
+    color: #002F34;
+}
+
+.go-back-from-sellFrom {
+    bottom: 1rem !important;
+    left: 45%;
+}
+
+@media (max-width: 575px) {
+    .formContainer {
+        /* margin-left: 3rem;
+        margin-right: 3rem; */
+        /* width: 100vw !important; */
+        /* margin-inline: 7rem !important; */
+    }
+}

@@ -1,5 +1,5 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif !important;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -27,4 +27,8 @@ input:focus {
 
 .grayShade {
     color: rgba(0, 47, 52, .64);
+}
+
+.curserPointer {
+    cursor: pointer;
 }

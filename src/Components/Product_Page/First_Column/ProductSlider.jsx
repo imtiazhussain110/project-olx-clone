@@ -1,9 +1,6 @@
 import React from "react";
-import img from "../../../Images/p1.jfif";
-import img2 from "../../../Images/p2.jfif";
-import img3 from "../../../Images/p3.jfif";
 
-function ProductSlider() {
+function ProductSlider(props) {
   return (
     <>
       <div className="productImageSlider border">
@@ -18,7 +15,7 @@ function ProductSlider() {
                 <img
                   data-bs-target="#bootstrapCarouselIndicator"
                   data-bs-slide-to="0"
-                  src={img}
+                  src={props.imgPath}
                   className="d-block w-auto active thumbs"
                   alt="product "
                 />
@@ -27,7 +24,7 @@ function ProductSlider() {
                   data-bs-target="#bootstrapCarouselIndicator"
                   data-bs-slide-to="1"
                   aria-label="Slide 2"
-                  src={img2}
+                  src={props.imgPath}
                   className="d-block w-auto thumbs"
                   alt="product "
                 />
@@ -36,7 +33,7 @@ function ProductSlider() {
                   data-bs-target="#bootstrapCarouselIndicator"
                   data-bs-slide-to="2"
                   aria-label="Slide 3"
-                  src={img3}
+                  src={props.imgPath}
                   className="d-block w-auto thumbs"
                   alt="product "
                 />
@@ -44,21 +41,21 @@ function ProductSlider() {
               <div className="carousel-inner carouselInnerContainer ">
                 <div className="carousel-item h-100 active">
                   <img
-                    src={img}
+                    src={props.imgPath}
                     className="d-block w-100 slideImg"
                     alt="product "
                   />
                 </div>
                 <div className="carousel-item h-100">
                   <img
-                    src={img2}
+                    src={props.imgPath}
                     className="d-block w-100 slideImg"
                     alt="product "
                   />
                 </div>
                 <div className="carousel-item h-100">
                   <img
-                    src={img3}
+                    src={props.imgPath}
                     className="d-block w-100 slideImg"
                     alt="product "
                   />

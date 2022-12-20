@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import DropDown from "./DropDown";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 function Categories() {
   const [isArrowUp, setIsArrowUp] = useState(false);
@@ -18,19 +20,17 @@ function Categories() {
   const categoryStyle = {
     display: isArrowUp ? "block" : "none",
   };
+
   return (
-    <div className="container-fuid border ">
+    <div className="container-fuid border-bottom mb-5 ">
       <div className="categorylist w-75 mx-auto my-3">
         <ul className=" list-inline">
           <li
             onClick={handleArrow}
-            className="category-heading list-inline-item fw-bold text-dark"
+            className="category-heading list-inline-item fw-bold text-dark fs-14 grayShade "
           >
             ALL CATEGORIES
-            <i
-              className="fa-solid fa-angle-down fs-6 arrowDown"
-              style={arrowStyle}
-            ></i>
+            <KeyboardArrowDownIcon style={arrowStyle} />
           </li>
           <li
             style={categoryStyle}
@@ -38,15 +38,39 @@ function Categories() {
           >
             <DropDown />
           </li>
-          <li className="list-inline-item ms-2 main-category">Mobile Phones</li>
-          <li className="list-inline-item ms-2 main-category">Cars</li>
-          <li className="list-inline-item ms-2 main-category">Motorcycles</li>
-          <li className="list-inline-item ms-2 main-category">Houses</li>
-          <li className="list-inline-item ms-2 main-category">
-            TV-Video-Audio
+          <li className="list-inline-item ms-2 ">
+            <Link
+              to="/productlistings"
+              className="text-decoration-none fs-14 grayShade main-category"
+            >
+              Electronics
+            </Link>
           </li>
-          <li className="list-inline-item ms-2 main-category">Tablets</li>
-          <li className="list-inline-item ms-2 main-category">Land & Plots</li>
+          <li className="list-inline-item ms-2 ">
+            <Link
+              to="/productlistings"
+              className="text-decoration-none fs-14 grayShade main-category"
+            >
+              Jewelery
+            </Link>
+          </li>
+          <li className="list-inline-item ms-2 ">
+            <Link
+              to="/productlistings"
+              className="text-decoration-none fs-14 grayShade main-category"
+            >
+              Men's Clothing
+            </Link>
+          </li>
+
+          <li className="list-inline-item ms-2">
+            <Link
+              to="/productlistings"
+              className="text-decoration-none fs-14 grayShade main-category"
+            >
+              Women's Clothing
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

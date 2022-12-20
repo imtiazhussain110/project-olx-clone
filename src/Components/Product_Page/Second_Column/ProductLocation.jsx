@@ -1,11 +1,12 @@
 import React from "react";
+import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 
-function ProductLocation() {
+function ProductLocation(props) {
   return (
     <>
       <div className="container border rounded-2 p-3">
         <h2 className="productLocationTitle">Posted in</h2>
-        <p className="fs-12 grayShade">New Samanabad, Lahore</p>
+        <p className="fs-12 grayShade">{props.location}</p>
         <div className="productLocationBox">
           <div className="location w-100 border rounded-2 shadow-sm">
             <iframe
@@ -18,7 +19,11 @@ function ProductLocation() {
               <p className="text-uppercase fw-bold fs-14 my-auto">
                 see location
               </p>
-              <i className="fa fa-angle-right max-height my-auto"></i>
+              <KeyboardArrowRightOutlinedIcon
+                role="button"
+                className="ms-auto max-height my-auto fs-4"
+              />
+              {/* <i className="fa fa-angle-right max-height my-auto"></i> */}
             </div>
           </div>
         </div>
