@@ -1,9 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function DropDown() {
+function DropDown({ apiData }) {
   return (
     <>
-      <div className="row">
+      <div className="ul">
+        {apiData.map((item, index) => {
+          const str = item;
+          const arr = str.split(" ");
+          for (let i = 0; i < arr.length; i++) {
+            arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+          }
+          const str2 = arr.join(" ");
+          return (
+            <li key={index} className="list-inline-item my-1 d-flex">
+              <Link
+                to={`/${item}`}
+                className="text-decoration-none fs-14 grayShade main-category"
+              >
+                {str2}
+              </Link>
+            </li>
+          );
+        })}
+      </div>
+
+      {/* <div className="row">
         <div className="col-3">
           <div>
             <h6 className="main-category fw-bold">Mobiles</h6>
@@ -758,7 +780,7 @@ function DropDown() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

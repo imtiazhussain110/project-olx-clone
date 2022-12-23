@@ -25,19 +25,13 @@ function Top() {
 
   return (
     <>
-      {/* Hamburger menu content goes here (In progress) */}
-
-      {/* ------------------------------------------------------- */}
       <div className="top container-fluid row w-75 mx-lg-auto">
-        <div className="col-1 col-sm-1 d-lg-none my-auto">
-          <i className="fa-solid fa-bars max-width"></i>
-        </div>
-        <div className="col-lg-1 col-2 col-sm-2 ">
+        <div className="col-lg-1 col-2 col-sm-4 ">
           <Link to="/" className="max-width align-middle">
             <Logo1 fill="#3A77FF" />
           </Link>
         </div>
-        <div className="col-lg-2 col-5 col-sm-5">
+        <div className="col-lg-2 col-5 col-sm-4 text-center">
           <a
             href="#"
             className="motor text-decoration-none max-width"
@@ -47,7 +41,7 @@ function Top() {
             <Car fill={isHoverCar ? "#3A77FF" : ""} />
           </a>
         </div>
-        <div className="col-lg-2 col-4 col-sm-4">
+        <div className="col-lg-2 col-4 col-sm-4 text-end text-lg-start">
           <a
             href="#"
             className="property text-decoration-none max-width"

@@ -23,7 +23,6 @@ function ProductLocation(props) {
                 role="button"
                 className="ms-auto max-height my-auto fs-4"
               />
-              {/* <i className="fa fa-angle-right max-height my-auto"></i> */}
             </div>
           </div>
         </div>

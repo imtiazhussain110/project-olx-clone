@@ -98,8 +98,8 @@
 }
 
 .allCategories {
-    top: calc(30% - 5px);
-    z-index: 500 !important;
+    top: 50%;
+    z-index: 600 !important;
 }
 
 .main-category {
@@ -112,15 +112,60 @@
     color: rgb(0, 164, 159) !important;
 }
 
+.hamburger {
+    background-color: #002F34;
+}
+
+/* ------------- Filter Menu ------------- */
+
+.filterMenu {
+    right: 0;
+    top: 2rem;
+    z-index: 500;
+    border: 5px solid #23E5DB;
+    border-radius: 5px;
+}
+
+.locationSearch {
+    width: calc(100% - 2rem);
+}
+
+.filterBtns:hover {
+    background-color: #C8F8F6;
+}
+
+.adjustScroll {
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding-block: 1rem;
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C6CFD1 !important;
+    border-radius: 5px;
+}
+
+.hr {
+    border: 1.4px solid #C6CFD1;
+    border-radius: 5px;
+}
+
+
 /* ------------- Cards ------------- */
 
 .card-img {
     width: 100%;
     object-fit: contain;
-    height: 150px;
+    height: 150px !important;
     background-color: rgb(34, 34, 34);
     border-radius: 5px 5px 0 0;
 }
+
+
 
 .featur-btn {
     background-color: #FFCE32;
@@ -215,9 +260,7 @@
 
 /* ------------- Product Listings ------------- */
 
-.productListingContainer {
-    width: 85%;
-}
+
 
 .CheckboxContainer {
 
@@ -234,6 +277,35 @@
 
 .CheckBoxLable {
     cursor: pointer;
+}
+
+.card-img-full {
+    width: 100%;
+    object-fit: contain;
+    height: 300px;
+    background-color: rgb(34, 34, 34);
+    border-radius: 5px 5px 0 0;
+}
+
+.featur-btn-full {
+    background-color: #FFCE32;
+    font-size: 10px;
+    top: 270px;
+    left: 5px;
+}
+
+.viewBtn {
+    padding: 4px;
+    border-radius: 20px;
+    font-size: 2rem !important;
+}
+
+.viewBtn:hover {
+    background-color: #23E5DB;
+}
+
+.categoryFilter:hover {
+    color: #002F34 !important;
 }
 
 

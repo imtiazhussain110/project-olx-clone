@@ -14,17 +14,6 @@ import { useState } from "react";
 import ProductListings from "./Components/ProductListing/ProductListings";
 
 function App() {
-  // to get data from it's child component (Cards.jsx)
-  const [cardData, setCardData] = useState(null);
-  const [categoryIndex, setcategoryindex] = useState();
-  const getCardIndex = (data) => {
-    setCardData(data);
-  };
-
-  const categoryId = (id) => {
-    setcategoryindex(id);
-  };
-  console.log(categoryIndex);
   return (
     <>
       <div className="App">
@@ -37,36 +26,31 @@ function App() {
               <>
                 <Header />
                 <Categories />
-                {/* recieving data from Cards.jsx */}
-                <Cards onClick={getCardIndex} />
+                <Cards />
                 <Download />
                 <Footer />
               </>
             }
           />
           <Route
-            path="/product"
+            path="/products/:id"
             element={
               <>
                 <Header />
-                <Categories getCategoryId={categoryId} />
-                {/* sending data to Product.jsx */}
-                <Product cardIndex={cardData} />
+                <Categories />
+                <Product />
                 <Footer />
               </>
             }
           />
 
           <Route
-            path="/productlistings"
+            path="/:category"
             element={
               <>
                 <Header />
                 <Categories />
-                <ProductListings
-                  onClick={getCardIndex}
-                  getCategory={categoryIndex}
-                />
+                <ProductListings />
                 <Footer />
               </>
             }
