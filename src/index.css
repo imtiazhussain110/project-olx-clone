@@ -32,3 +32,7 @@ input:focus {
 .curserPointer {
     cursor: pointer;
 }
+
+.w-80 {
+    width: 83% !important;
+}

@@ -35,7 +35,7 @@ export default function Cards() {
           <img className=" w-25" src={loadingImg2} alt="" />
         </div>
       ) : (
-        <div className="container-fluid my-5 w-75">
+        <div className="container-fluid mb-5 w-80">
           <h4 className="p-3">Fresh Recomendations</h4>
           <div className="row gy-3 ">
             {apiData.slice(0, morePosts).map((item, index) => {
@@ -45,10 +45,7 @@ export default function Cards() {
                     className="text-decoration-none"
                     to={`/products/${item.id}`}
                   >
-                    <div
-                      className="card position-relative"
-                      style={{ height: "auto", minHeight: "310px" }}
-                    >
+                    <div className="card position-relative cardHeightDisc">
                       <img
                         src={item.image}
                         className="card-img-top card-img"
@@ -57,15 +54,15 @@ export default function Cards() {
                       <button className="featur-btn position-absolute border-0 rounded p-1 fw-bold">
                         FEATURED
                       </button>
-                      <div className="card-body position-relative pb-0">
+                      <div className="card-body  position-relative pb-0">
                         <span className="feature-line position-absolute top-0 start-0"></span>
                         <FavoriteBorderIcon className="position-absolute text-dark heart-icon" />
 
-                        <p className="card-text text-dark w-lg-75">
-                          {item.title.slice(0, 40)}
+                        <p className="card-text text-dark w-lg-75 mb-1">
+                          {item.title.slice(0, 20)}
                         </p>
 
-                        <h5 className="fw-bold price text-dark">
+                        <h5 className="fw-bold price text-dark m-0">
                           Rs {item.price}
                         </h5>
                         <p className="cardFooter position-absolute bottom-0">

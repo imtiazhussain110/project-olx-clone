@@ -9,7 +9,7 @@ import FollowUS from "./FollowUS";
 function Footer() {
   return (
     <>
-      <div className="row footer container-fluid px-5 mx-auto gx-5 py-4">
+      <div className="row footer container-fluid px-lg-5 px-md-5 px-sm-5 px-xs-0 mx-auto gx-5 py-4">
         <div className="col-md-2 ">
           <PopularCategories />
         </div>

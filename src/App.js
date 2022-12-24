@@ -8,17 +8,12 @@ import Download from "./Components/Download";
 import Product from "./Components/Product_Page/Product";
 import { Route, Routes } from "react-router-dom";
 import SellForm from "./Components/SellForm/SellForm";
-import Login from "./Components/Login-SignUp/Login";
-import SignUp from "./Components/Login-SignUp/SignUp";
-import { useState } from "react";
 import ProductListings from "./Components/ProductListing/ProductListings";
 
 function App() {
   return (
     <>
       <div className="App">
-        {/* <SignUp /> */}
-
         <Routes>
           <Route
             path="/"

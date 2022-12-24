@@ -17,9 +17,12 @@
     width: max-content;
 }
 
+.test {
+    width: fit-content;
+}
 
 .productSearch {
-    width: 40%;
+    width: 35%;
 }
 
 .productSearchButton {
@@ -47,7 +50,7 @@
 }
 
 .sellButton {
-    top: 1px;
+    top: -1px;
     left: 1.7rem;
     width: max-content;
 
@@ -57,6 +60,8 @@
     cursor: pointer;
     z-index: 12 !important;
 }
+
+
 
 /* ------------- Header Media Queries ------------- */
 
@@ -71,7 +76,7 @@
 }
 
 
-@media (max-width: 992px) {
+@media (max-width: 1025px) {
     .sellButtonContainer {
         position: fixed !important;
         bottom: 2rem;
@@ -90,6 +95,8 @@
         left: 34%;
     }
 }
+
+
 
 /* ------------- Category ------------- */
 
@@ -163,6 +170,23 @@
     height: 150px !important;
     background-color: rgb(34, 34, 34);
     border-radius: 5px 5px 0 0;
+}
+
+.cardHeightDisc {
+    height: auto;
+    min-height: 295px !important;
+}
+
+.cardHeightFull {
+    height: auto;
+    min-height: 450px !important;
+}
+
+
+@media (max-width: 992px) {
+    .cardHeightDisc {
+        min-height: 287px !important;
+    }
 }
 
 
@@ -257,6 +281,14 @@
     font-weight: 100 !important;
     font-size: 12px !important;
 }
+
+@media (max-width: 379px) {
+    .store-icons {
+        margin-block: 6px;
+    }
+
+}
+
 
 /* ------------- Product Listings ------------- */
 

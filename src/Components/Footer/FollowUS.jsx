@@ -17,7 +17,7 @@ function FollowUS() {
             <img src={facebook} alt="Facebook Logo" className="social-icons" />
           </a>
           <a href="" target="_blank">
-            <img src={twitter} alt="Twitter Logo" className="social-icons" />
+            <img src={twitter} alt="Twitter Logo" className="social-icons " />
           </a>
           <a href="" target="_blank">
             <img src={youtube} alt="Youtube Logo" className="social-icons" />
@@ -31,10 +31,18 @@ function FollowUS() {
             <img src={appStore} alt="App Store" className="store-icons" />
           </a>
           <a href="" target="_blank">
-            <img src={playStore} alt="Google Play" className="store-icons" />
+            <img
+              src={playStore}
+              alt="Google Play"
+              className="store-icons my-xs-2 my-sm-2 my-md-2 "
+            />
           </a>
           <a href="" target="_blank">
-            <img src={appGallery} alt="App Gallery" className="store-icons" />
+            <img
+              src={appGallery}
+              alt="App Gallery"
+              className="store-icons mt-xs-2 my-sm-2 my-md-2"
+            />
           </a>
         </div>
       </section>

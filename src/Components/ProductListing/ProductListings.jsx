@@ -6,6 +6,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 import ViewAgendaOutlinedIcon from "@mui/icons-material/ViewAgendaOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import loadingImg2 from "../../Images/loading2.gif";
 import ProductListingCategory from "./ProductListingCategory";
 import FilterMenu from "../FilterMenu/FilterMenu";
@@ -16,7 +17,8 @@ function ProductListings() {
   const [disc, setDisc] = useState(true);
   const [fullView, setFullView] = useState(false);
   const [rowView, setRowView] = useState(false);
-  const [cardHeight, setCardHeight] = useState({});
+  // const [cardHeight, setCardHeight] = useState({});
+  const [cardClasses, setCardClasses] = useState("");
   const [cardContainerClass, setCardContainerClass] = useState("");
   const [cardImgClass, setCardImgClass] = useState("");
   const [featureBtn, setFeatureBtn] = useState("");
@@ -37,10 +39,7 @@ function ProductListings() {
 
   const handleFullView = () => {
     setCardContainerClass("col-12");
-    setCardHeight({
-      height: "auto",
-      minHeight: 450,
-    });
+    setCardClasses("card position-relative cardHeightFull");
     setCardImgClass("card-img-top card-img-full");
     setFeatureBtn(
       "featur-btn-full position-absolute border-0 rounded p-1 fw-bold"
@@ -52,10 +51,7 @@ function ProductListings() {
 
   const handleDisc = () => {
     setCardContainerClass("col-md-6 col-sm-12 col-lg-4");
-    setCardHeight({
-      height: "auto",
-      minHeight: 310,
-    });
+    setCardClasses("card position-relative cardHeightDisc");
     setCardImgClass("card-img-top card-img");
     setFeatureBtn("featur-btn position-absolute border-0 rounded p-1 fw-bold");
     setDisc(true);
@@ -110,7 +106,10 @@ function ProductListings() {
                   style={isFilter ? { display: "block" } : { display: "none" }}
                   className="filterMenu position-absolute shadow bg-white w-100 py-3 px-2 mt-2"
                 >
-                  <FilterMenu />
+                  <FilterMenu
+                    handleDiscBtn={handleDisc}
+                    handleFullViewBtn={handleFullView}
+                  />
                 </div>
               </div>
               {/* Filter Menu Ends */}
@@ -284,10 +283,7 @@ function ProductListings() {
                           className="text-decoration-none"
                           to={`/products/${item.id}`}
                         >
-                          <div
-                            className="card position-relative"
-                            style={cardHeight}
-                          >
+                          <div className={cardClasses}>
                             <img
                               src={item.image}
                               className={cardImgClass}
@@ -296,7 +292,8 @@ function ProductListings() {
                             <button className={featureBtn}>FEATURED</button>
                             <div className="card-body position-relative pb-0">
                               <span className="feature-line position-absolute top-0 start-0"></span>
-                              <i className="fa-regular fa-heart heart-icon position-absolute text-dark"></i>
+
+                              <FavoriteBorderIcon className="position-absolute text-dark heart-icon" />
                               <p className="card-text text-dark w-lg-75">
                                 {item.title.slice(0, 20)}
                               </p>
@@ -304,7 +301,7 @@ function ProductListings() {
                               <h5 className="fw-bold price text-dark">
                                 Rs {item.price}
                               </h5>
-                              <p className="cardFooter position-absolute bottom-0">
+                              <p className="cardFooter position-absolute bottom-0 ">
                                 Lahore • 1 week ago
                               </p>
                             </div>

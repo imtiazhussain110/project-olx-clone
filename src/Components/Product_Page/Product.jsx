@@ -32,7 +32,7 @@ function Product() {
             <div className="col-lg-7">
               <ProductSlider imgPath={apiData.image} />
               <ProductInfo
-                brand={apiData.brand}
+                rating={apiData.rating.rate}
                 price={apiData.price}
                 condition={apiData.condition}
                 description={apiData.description}

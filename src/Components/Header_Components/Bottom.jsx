@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo2 from "../../Images/logo2.svg";
-import Login from "../Login-SignUp/Login";
 import SellButton from "./SellButton";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
@@ -38,41 +37,14 @@ function Bottom() {
 
         {/* Login  */}
 
-        <button className=" border-0 bg-transparent col-lg-1 d-none d-lg-block">
-          <span
-            className="loginButton fs-5 fw-bold text-decoration-none position-relative"
-            // data-bs-toggle="modal"
-            // data-bs-target="#exampleModal"
-          >
+        <button className=" border-0 bg-transparent col-lg-1 d-none d-lg-block p-0">
+          <span className="loginButton fs-5 fw-bold text-decoration-none position-relative">
             Login
           </span>
         </button>
-        {/* <div
-          class="modal fade"
-          id="exampleModal"
-          tabIndex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <Login />
-              </div>
-            </div>
-          </div>
-        </div> */}
 
         {/* Sell */}
-        <div className="col-lg-1">
+        <div className="col-lg-1 p-0">
           <SellButton />
         </div>
       </div>

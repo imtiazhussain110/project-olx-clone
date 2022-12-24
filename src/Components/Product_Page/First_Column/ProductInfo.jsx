@@ -7,8 +7,8 @@ function ProductInfo(props) {
         <h2 className="productInfoHeading fw-bold">Details</h2>
         <div className="row">
           <div className="col-lg-6 d-flex justify-content-between">
-            <p className="fs-14 grayShade">Brand</p>
-            <p className="fs-14">{props.brand}</p>
+            <p className="fs-14 grayShade">Rating</p>
+            <p className="fs-14">{props.rating}</p>
           </div>
           <div className="col-lg-6 d-flex justify-content-between">
             <p className="fs-14 grayShade">Price</p>

@@ -24,7 +24,7 @@ function Download() {
               <img
                 src={playStore}
                 alt="Google Play"
-                className="store-icon-download"
+                className="store-icon-download my-md-1"
               />
             </a>
             <a href="" target="_blank">

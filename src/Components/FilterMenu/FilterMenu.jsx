@@ -5,7 +5,8 @@ import ViewAgendaOutlinedIcon from "@mui/icons-material/ViewAgendaOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-function FilterMenu() {
+
+function FilterMenu(props) {
   const [disc, setDisc] = useState(false);
   const [fullView, setFullView] = useState(false);
   const [rowView, setRowView] = useState(false);
@@ -99,7 +100,6 @@ function FilterMenu() {
         <div className="adjustScroll ps-2">
           <button
             className="filterBtns btn btn-sm border px-2 "
-            value="low"
             onClick={handleRow}
             style={
               rowView
@@ -112,8 +112,10 @@ function FilterMenu() {
           </button>
           <button
             className="filterBtns btn btn-sm border px-2 mx-2"
-            value="low"
-            onClick={handleDisc}
+            onClick={() => {
+              props.handleDiscBtn();
+              handleDisc();
+            }}
             style={
               disc
                 ? { backgroundColor: "#C8F8F6", outline: "2px solid #04b2a9" }
@@ -125,8 +127,10 @@ function FilterMenu() {
           </button>
           <button
             className="filterBtns btn btn-sm border px-2"
-            value="low"
-            onClick={handleFullView}
+            onClick={() => {
+              props.handleFullViewBtn();
+              handleFullView();
+            }}
             style={
               fullView
                 ? { backgroundColor: "#C8F8F6", outline: "2px solid #04b2a9" }

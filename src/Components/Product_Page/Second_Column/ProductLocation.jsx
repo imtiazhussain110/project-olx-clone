@@ -1,17 +1,17 @@
 import React from "react";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 
-function ProductLocation(props) {
+function ProductLocation() {
   return (
     <>
       <div className="container border rounded-2 p-3">
         <h2 className="productLocationTitle">Posted in</h2>
-        <p className="fs-12 grayShade">{props.location}</p>
+        <p className="fs-12 grayShade">Barkat Market, Lahore</p>
         <div className="productLocationBox">
           <div className="location w-100 border rounded-2 shadow-sm">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6801.2300259815265!2d74.30231937329555!3d31.534732175459236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919035e4493c7fd%3A0x4ed3aa9816c44036!2sNew%20Samanabad%20Samanabad%20Town%2C%20Lahore%2C%20Punjab%2054000%2C%20Pakistan!5e0!3m2!1sen!2s!4v1670642967375!5m2!1sen!2s"
-              className="w-100 "
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3043.131095895652!2d74.31969246334117!3d31.500981597492654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904710773389f%3A0x4df4dc1440f48ee1!2sBarkat%20Market!5e0!3m2!1sen!2s!4v1671835882758!5m2!1sen!2s"
+              className="w-100"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>

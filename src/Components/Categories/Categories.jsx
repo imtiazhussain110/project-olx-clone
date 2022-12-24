@@ -33,7 +33,7 @@ function Categories() {
   };
 
   return (
-    <div className="container-fuid border-bottom mb-5 ">
+    <div className="container-fuid border-bottom mb-3 ">
       <div className="categorylist w-75 mx-auto my-3 d-flex justify-content-between position-relative">
         <ul className=" list-inline">
           <li
