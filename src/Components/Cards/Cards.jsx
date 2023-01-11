@@ -6,19 +6,23 @@ import { Link } from "react-router-dom";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import loadingImg from "../../Images/loading.gif";
 import loadingImg2 from "../../Images/loading2.gif";
+import { useDispatch, useSelector } from "react-redux";
+import { setProduct } from "../../Redux/Actions/actions";
 
 export default function Cards() {
   const initialPosts = 8;
 
-  const [apiData, setApiData] = useState([]);
   const [morePosts, setMorePosts] = useState(initialPosts);
   const [isLoading, setIsLoading] = useState(false);
+
+  const products = useSelector((state) => state.products);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setIsLoading(true);
     axios.get(`https://fakestoreapi.com/products`).then((result) => {
       const data = result.data;
-      setApiData(data);
+      dispatch(setProduct(data));
       setIsLoading(false);
     });
   }, []);
@@ -32,22 +36,20 @@ export default function Cards() {
     <>
       {isLoading ? (
         <div className=" text-center w-100">
-          <img className=" w-25" src={loadingImg2} alt="" />
+          <img className="loading" src={loadingImg2} alt="" />
         </div>
       ) : (
         <div className="container-fluid mb-5 w-80">
           <h4 className="p-3">Fresh Recomendations</h4>
           <div className="row gy-3 ">
-            {apiData.slice(0, morePosts).map((item, index) => {
+            {products.products?.slice(0, morePosts).map((item, index) => {
+              const { id, image, title, price } = item;
               return (
                 <div key={index} className="col-md-4 col-sm-6 col-lg-3">
-                  <Link
-                    className="text-decoration-none"
-                    to={`/products/${item.id}`}
-                  >
+                  <Link className="text-decoration-none" to={`/products/${id}`}>
                     <div className="card position-relative cardHeightDisc">
                       <img
-                        src={item.image}
+                        src={image}
                         className="card-img-top card-img"
                         alt="product"
                       />
@@ -59,11 +61,11 @@ export default function Cards() {
                         <FavoriteBorderIcon className="position-absolute text-dark heart-icon" />
 
                         <p className="card-text text-dark w-lg-75 mb-1">
-                          {item.title.slice(0, 20)}
+                          {title.slice(0, 20)}
                         </p>
 
                         <h5 className="fw-bold price text-dark m-0">
-                          Rs {item.price}
+                          Rs {price}
                         </h5>
                         <p className="cardFooter position-absolute bottom-0">
                           Lahore • 1 week ago
@@ -76,7 +78,7 @@ export default function Cards() {
             })}
           </div>
           <div className="container-fluid py-3">
-            {morePosts < apiData.length ? (
+            {morePosts < products.products?.length ? (
               <button
                 onClick={loadMore}
                 className="load-more-btn btn btn-md border border-2 border-dark mx-auto d-block fw-bold"

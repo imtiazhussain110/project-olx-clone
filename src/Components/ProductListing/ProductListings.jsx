@@ -83,7 +83,7 @@ function ProductListings() {
       <div className="container-fluid productListingContainer w-75 mb-5">
         {isLoading ? (
           <div className=" text-center w-100">
-            <img className=" w-25" src={loadingImg2} alt="" />
+            <img className="loading" src={loadingImg2} alt="" />
           </div>
         ) : (
           <>

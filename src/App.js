@@ -9,51 +9,55 @@ import Product from "./Components/Product_Page/Product";
 import { Route, Routes } from "react-router-dom";
 import SellForm from "./Components/SellForm/SellForm";
 import ProductListings from "./Components/ProductListing/ProductListings";
+import { Provider } from "react-redux";
+import store from "./Redux/store";
 
 function App() {
   return (
     <>
-      <div className="App">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Header />
-                <Categories />
-                <Cards />
-                <Download />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/products/:id"
-            element={
-              <>
-                <Header />
-                <Categories />
-                <Product />
-                <Footer />
-              </>
-            }
-          />
+      <Provider store={store}>
+        <div className="App">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Header />
+                  <Categories />
+                  <Cards />
+                  <Download />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/products/:id"
+              element={
+                <>
+                  <Header />
+                  <Categories />
+                  <Product />
+                  <Footer />
+                </>
+              }
+            />
 
-          <Route
-            path="/:category"
-            element={
-              <>
-                <Header />
-                <Categories />
-                <ProductListings />
-                <Footer />
-              </>
-            }
-          />
+            <Route
+              path="/:category"
+              element={
+                <>
+                  <Header />
+                  <Categories />
+                  <ProductListings />
+                  <Footer />
+                </>
+              }
+            />
 
-          <Route path="/sellForm" element={<SellForm />} />
-        </Routes>
-      </div>
+            <Route path="/sellForm" element={<SellForm />} />
+          </Routes>
+        </div>
+      </Provider>
     </>
   );
 }

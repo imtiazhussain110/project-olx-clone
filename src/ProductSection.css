@@ -28,7 +28,7 @@
 
 .active {
     opacity: 1 !important;
-    border: 2px solid black;
+    border: 0px solid rgb(86, 84, 84) !important;
 
 }
 

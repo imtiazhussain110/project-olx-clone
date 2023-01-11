@@ -4,14 +4,15 @@ import { Link } from "react-router-dom";
 function DropDown({ apiData }) {
   return (
     <>
-      <div className="ul">
-        {apiData.map((item, index) => {
+      <ul>
+        {apiData?.map((item, index) => {
           const str = item;
           const arr = str.split(" ");
           for (let i = 0; i < arr.length; i++) {
             arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
           }
           const str2 = arr.join(" ");
+
           return (
             <li key={index} className="list-inline-item my-1 d-flex">
               <Link
@@ -23,7 +24,7 @@ function DropDown({ apiData }) {
             </li>
           );
         })}
-      </div>
+      </ul>
 
       {/* <div className="row">
         <div className="col-3">

@@ -6,15 +6,19 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import axios from "axios";
 import FilterMenu from "../FilterMenu/FilterMenu";
+import { useDispatch, useSelector } from "react-redux";
+import { setCategory } from "../../Redux/Actions/actions";
 
 function Categories() {
-  const [apiData, setApiData] = useState([]);
   const [isArrowUp, setIsArrowUp] = useState(false);
+
+  const category = useSelector((state) => state.category);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products/categories`).then((result) => {
       const data = result.data;
-      setApiData(data);
+      dispatch(setCategory(data));
     });
   }, []);
 
@@ -47,10 +51,10 @@ function Categories() {
             style={categoryStyle}
             className="allCategories position-absolute left-0 bg-white shadow p-2 mt-1"
           >
-            <DropDown apiData={apiData} />
+            <DropDown apiData={category.category} />
           </li>
 
-          {apiData.map((item, index) => {
+          {category.category?.map((item, index) => {
             const str = item;
             const arr = str.split(" ");
             for (let i = 0; i < arr.length; i++) {

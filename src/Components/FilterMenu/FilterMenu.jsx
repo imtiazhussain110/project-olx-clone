@@ -145,10 +145,10 @@ function FilterMenu(props) {
 
       {/* Category Select (Accordion) */}
       <div className="accordion" id="categoryAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="categoryHeading">
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="categoryHeading">
             <button
-              class="accordion-button"
+              className="accordion-button"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
@@ -161,11 +161,11 @@ function FilterMenu(props) {
           </h2>
           <div
             id="collapseOne"
-            class="accordion-collapse collapse"
+            className="accordion-collapse collapse"
             aria-labelledby="categoryHeading"
             data-bs-parent="#categoryAccordion"
           >
-            <div class="accordion-body">
+            <div className="accordion-body">
               <ul className="list-unstyled ms-3 my-2">
                 <li className="fs-14 mb-1">
                   <Link

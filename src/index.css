@@ -36,3 +36,13 @@ input:focus {
 .w-80 {
     width: 83% !important;
 }
+
+.loading {
+    width: 50% !important;
+}
+
+@media (max-width: 786px) {
+    .loading {
+            width: 70% !important;
+        }
+}
